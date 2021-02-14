@@ -1,0 +1,57 @@
+-
+    const ourTechnique = [{
+        'img': 'static/images/content/our-technique/berkut.jpg',
+        'href': '#',
+        'alt': 'Беркут',
+        'title': 'Беркут',
+        'descr': 'УБГ-С «Беркут» - одна из самых мощных буровых установок данной серии на гусеничной',
+        badge: 'звоните!'
+    },
+        {
+            'img': 'static/images/content/our-technique/hktc-hlc-8026.jpg',
+            'href': '#',
+            'alt': 'hlc-8026',
+            'title': 'HKTC HLC-8026',
+            'descr': 'Бурильно-крановая установка HKTC HLC-8026',
+            badge: 'звоните!'
+        },
+        {
+            'img': 'static/images/content/our-technique/bauer-bg-15-36.jpg',
+            'href': '#',
+            'alt': 'bauer-bg-15-36',
+            'title': 'Bauer BG 15-36',
+            'descr': 'Буровые работы на установках Bauer BG36H и Bauer BG15',
+            badge: 'звоните!'
+        },
+        {
+            'img': 'static/images/content/our-technique/alligator.jpg',
+            'href': '#',
+            'alt': 'Аллигатор',
+            'title': 'Аллигатор',
+            'descr': 'Буровая установка гидрофицированная легкой серии на гусеничной базе',
+            badge: 'звоните!'
+        },
+        {
+            'img': 'static/images/content/our-technique/sterh.jpg',
+            'href': '#',
+            'alt': 'Стерх',
+            'title': 'Стерх',
+            'descr': 'СБГ-ПМ3 СТЕРХ - буровой станок гидрофицированный переносной модульный',
+            badge: 'звоните!'
+        }];
+
+.container
+    .row
+        .col-sm-12
+            .our-technique__title.section-title
+                span Буровая компания "БУРЭКС"
+            .our-technique__subtitle
+                span наша техника
+            .our-technique__descr
+                p
+                    |Строительная компания «БУРЭКС» имеет большой опыт в области строительного бурения в Москве и обладает собственным парком буровых установок. Мы выполняем буровые работы Москве в различных условиях эксплуатации. Буровые работы в Москве — это комплекс мероприятий по разрушению пород грунта с целью устройства свай для последующего строительства. Они выполняются с помощью специализированного оборудования.
+    .row
+        +cards(ourTechnique, 'technique')(class="col-sm-6")
+    .row
+        .col-sm-12
+            +button('a', 'btn-tech','Посмотреть больше техники', 'padding: 10px 15px; max-width: 300px;', '/technique-cat.html', '_self', 'margin: 4rem 0 0 0;')

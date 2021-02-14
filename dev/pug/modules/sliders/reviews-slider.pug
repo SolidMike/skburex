@@ -1,0 +1,32 @@
+.container
+    .row
+        .col-sm-12
+            .reviews__title.title.right-line
+                span Отзывы
+                .reviews-slider__buttons-wrapper
+                    .swiper-button-prev.reviews-slider__btn-prev
+                        i.fas.fa-chevron-left
+                    .swiper-button-next.reviews-slider__btn-next
+                        i.fas.fa-chevron-right
+
+            .swiper-container.reviews-slider
+                .swiper-wrapper
+                    .swiper-slide
+                        .row
+                            .col.reviews__item
+                                blockquote
+                                    p.reviews__quote
+                                        |И.П. Дугин выражаем благодарность за выполненную работу ООО"Бурэкс". Благодарим за своевременное и качественное выполнение работ. Надеемся на дальнейшее сотрудничество.
+                                .reviews__author
+                                    cite.reviews__author-name Максим Викторович
+                                    .reviews__author-description ГЕНЕРАЛЬНЫЙ ДИРЕКТОР
+                    .swiper-slide
+                        .row
+                            .col.reviews__item
+                                blockquote
+                                    p.reviews-slider__quote
+                                        | Строительная фирма «Бурэкс» качественно выполнила все работы, согласно обговоренному тз. Рабочие уложились в поставленные сроки. Спасибо за хорошее сотрудничество и дальнейшего процветания Вашей компании!
+                                .reviews__author
+                                    cite.reviews__author-name АЛЛА ВИКТОРОВНА
+                                    .reviews__author-description МЕНЕДЖЕР ПО ПРОЕКТАМ
+            +button('a', 'btn-tech', 'Оставьте отзыв!', 'padding: 1rem 1.9rem; max-width: 200px; margin-left: 0 auto;', '/comments.html', '_self', 'padding: 1rem 0;')

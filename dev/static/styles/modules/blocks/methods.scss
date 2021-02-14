@@ -1,0 +1,88 @@
+.methods {
+  &__list {
+
+  }
+  &__item {
+    margin-top: 2rem;
+    > *:not(:first-child) {
+      margin-top: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-breakpoint-up(sm) {
+      min-width: 20%;
+      text-align: center;
+    }
+  }
+  &__icon {
+    width: 80px;
+    height: 80px;
+    background: url('/static/images/content/methods/hexagonal.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 2rem;
+  }
+  &__text {
+    color: #34373b;
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  &__link {
+    font-size: 1rem;
+  }
+  &__accordion {
+    .card {
+      margin-top: 2rem;
+      border: none;
+    }
+    .card-header {
+      padding: 0.25rem 1.25rem;
+      background-color: #f0f0f0;
+      border: 1px solid rgb(156, 156, 156);
+      &:hover,
+      &:active {
+        background-color: #e2e2e2;
+      }
+      &:first-child {
+        border-radius: 1rem;
+      }
+    }
+    .card-body {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      border-width: 0 1px 1px 1px;
+      border-color: rgb(156, 156, 156);
+      border-style: solid;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      color: #333;
+    }
+    .btn-link {
+      font-weight: 700;
+      color: #333;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(212, 175, 0, 0.5);
+      }
+      &:before {
+        content: '+';
+        position: absolute;
+        left: -10px;
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: .5;
+      }
+      &[aria-expanded="true"] {
+        &:before {
+          content: '-';
+        }
+      }
+    }
+  }
+}

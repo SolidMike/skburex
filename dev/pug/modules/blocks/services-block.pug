@@ -1,0 +1,20 @@
+.widget-panel-wrapper.bg-whitesmoke
+    .container
+        .row
+            -
+                const servicesList = [{
+                    'icon': 'fa  fa-money-bill',
+                    'title': 'ваша экономия',
+                    'subtitle': 'низкие цены на весь спект услуг'
+                },
+                    {
+                        'icon': 'fa fa-calendar',
+                        'title': 'гарантия качества',
+                        'subtitle': 'соответствие сертификатам'
+                    },
+                    {
+                        'icon': 'fa  fa-users',
+                        'title': 'опыт работы',
+                        'subtitle': 'Квалифицированные специалисты'
+                    }]
+            +widget(servicesList, 'services', false)

@@ -1,0 +1,33 @@
+.price-download {
+  padding: 1.5rem 0;
+  &__title {
+    color: $white;
+  }
+  &__subtitle {
+    font-size: 1rem;
+  }
+  .btn-wrapper {
+    @include media-breakpoint-down(md) {
+      margin: 2rem auto 0 auto;
+      display: block;
+      max-width: 300px;
+    }
+  }
+  .btn-tech {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      border: 1px dashed rgba(250,250,250,.5);
+      width: calc(100% + 1.875rem);
+      height: calc(100% + 1.875rem);
+      left: -1rem;
+      top: -1rem;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

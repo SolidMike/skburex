@@ -1,0 +1,52 @@
+.technique {
+  &__item {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 1rem;
+    }
+    &:hover,
+    &:active {
+      .custom-card {
+        &__caption,
+        &__footer {
+          background-color: $darkgoldenrod;
+          a {
+            color: $white;
+          }
+        }
+        &__descr {
+          color: $white;
+        }
+        &__title {
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
+}
+
+.our-technique {
+  &__title {
+    color: $white;
+    &:after,
+    &:before {
+      background-color: $white;
+    }
+  }
+  &__descr {
+    color: $white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__subtitle {
+    color: $darkgoldenrod;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .technique__item {
+    @include media-breakpoint-up(lg) {
+      max-width: 20%;
+    }
+  }
+}

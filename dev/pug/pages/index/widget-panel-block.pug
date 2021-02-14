@@ -1,0 +1,23 @@
+.widget-panel-wrapper.bg-dark-gradient
+    .container
+        .row
+            -
+                const popoverList = [{
+                    'icon': 'fa  fa-clock',
+                    'title': 'время работы',
+                    'subtitle': 'с 09:00 до 19:00',
+                    content: '<div class="time-table"><div class="inner-bg"><dl class="week-day "><dt>Понедельник</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl><dl class="week-day  light-bg"><dt>Вторник</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl><dl class="week-day "><dt>Среда</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl><dl class="week-day  light-bg"><dt>Четверг</dt><dd class="week-day__line"></dd><dd>09:00-21:00</dd></dl><dl class="week-day  today"><dt>Пятница</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl><dl class="week-day  light-bg"><dt>Суббота</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl><dl class="week-day "><dt>Воскресенье</dt><dd class="week-day__line"></dd><dd>09:00-19:00</dd></dl></div><div class="additional-info">Прием заявок: с 09.00 до 20.00.</div></div>'
+                },
+                    {
+                        'icon': 'fa  fa-home',
+                        'title': 'моск. обл, г.одинцово',
+                        'subtitle': 'ул.Акуловская, д.2а,оф.201',
+                        content: '143002, Московская область, г. Одинцово, ул. Акуловская, д.2а, офис 201'
+                    },
+                    {
+                        'icon': 'fa  fa-tags',
+                        'title': 'скачать прайс лист',
+                        'subtitle': 'компании ооо "бурэкс"',
+                        content: '<div style="font-weight: 800;">Скачайте прайс-лист ООО «БУРЭКС»</div><a class="btn btn-primary btn-tech" href="#" target="_self" style="padding: 1rem 1.9rem; max-width: 165px; margin-left: 0;"><span>Скачать</span></a>'
+                    }]
+            +widget(popoverList, 'widget-panel', true)

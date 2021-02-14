@@ -1,0 +1,37 @@
+.site-header.bg-dark-img
+    .container
+        .row
+            header.header
+                .container
+                    .row
+                        .header__container.col-sm-12
+                            .header__logo
+                                a(href="/")
+                                    img(src="static/images/general/logo.png" alt="")
+                            .header__menu.flex-grow-1
+                                .header__contacts
+                                    -
+                                        const contactsList = [{
+                                            'icon': 'fa fa-phone',
+                                            'href': 'tel:+79269096614',
+                                            'subtitle': '+7 (926) 909-66-14'
+                                        },
+                                            {
+                                                'icon': 'fa fa-fax',
+                                                'href': 'tel:74952299601',
+                                                'subtitle': '+7 (495) 229-96-01 доб.293'
+                                            },
+                                            {
+                                                'icon': 'fa fa-envelope',
+                                                'href': 'mailto:burex.msk@gmail.com',
+                                                'subtitle': 'burex.msk@gmail.com'
+                                            },
+                                            {'icon': 'fab fa-instagram', 'href': 'https://www.instagram.com/burex.msk/'},
+                                            {'icon': 'fab fa-vk', 'href': 'https://vk.com/skburex'}]
+                                    +widget(contactsList, 'contacts', false)
+                                include ../main-nav/main-nav
+                                include ../sticky-nav/sticky-nav
+            .container
+                .row
+                    .col-sm-12
+                        .page-header__title.title #{title}

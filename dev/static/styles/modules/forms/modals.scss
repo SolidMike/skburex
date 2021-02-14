@@ -1,0 +1,32 @@
+.custom-modal {
+  .close {
+    &:focus {
+      outline: none;
+    }
+  }
+  .modal-title {
+    text-align: center;
+    width: 100%;
+    color: $black;
+    font-size: 2.5rem;
+  }
+  .modal-content {
+    text-align: center;
+  }
+  .modal-footer {
+    justify-content: center;
+  }
+  .callback-modal {
+    &__form {
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+#privacy-policy-modal {
+  z-index: 1051;
+}

@@ -1,0 +1,28 @@
+#sticky-nav.main__nav
+    nav.navbar.navbar-expand-lg.navbar-light
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#stickyNav' aria-controls='stickyNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #stickyNav.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                li.nav-item
+                    a.nav-link(href='/')
+                        | главная
+                        span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='/about.html') о нас
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(href='/technique-cat.html' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                        | техника
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/technique-single.html') Беркут
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(href='/services.html' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                        | услуги
+                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='/service-single.html') Буровые работы
+                li.nav-item
+                    a.nav-link(href='/portfolio.html') портфолио
+                li.nav-item
+                    a.nav-link(href='/blog.html') статьи
+                li.nav-item
+                    a.nav-link(href='/contacts.html') контакты

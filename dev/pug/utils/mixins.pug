@@ -1,0 +1,101 @@
+mixin icon(name,mod)
+    if(mod)
+        svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+            use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+    else
+        svg(class="svg-sprite-icon icon-" + name)
+            use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+
+mixin widget(arr, className, popover)
+    each val in arr
+        .widget-item(class=className === 'contacts' ? className + '__item': className + '__item col-lg col-md-12')
+            div(class=popover ? 'widget popover-icon-box h-100': 'widget widget-icon-box')
+                .icon-box.h-100
+                    i(class=val.icon)
+                    if val.title !== undefined || val.subtitle !== undefined
+                        .icon-box__text
+                            .icon-box__title=val.title
+                            span.icon-box__subtitle
+                                if val.href !== undefined
+                                    a(href=val.href) #{val.subtitle}
+                                else
+                                    =val.subtitle
+                            if popover
+                                .btn.popover-icon-box__button
+                    else
+                        a(href=val.href)
+                if popover
+                    .popover-icon-box-content!=val.content
+
+mixin step(arr)
+    each item in arr
+        .step__item.col-md.col-sm-6&attributes(attributes)
+            .step__icon
+                i(class=item.icon)
+            .step__text=item.text
+            if item.href
+                a(href=item.href).step__link
+                    .step__link-text=item.hrefText
+
+mixin table(arr, className)
+    each item in arr
+        div.custom-table__item(class= className + '__item')
+            if item.badge
+                span.custom-table__badge(class= className + '__badge')= item.badge
+            if item.left
+                span.custom-table__left(class= className + '__left')= item.left
+            span.custom-table__line(class= className + '__line')
+            span.custom-table__right(class= className + '__right')= item.right
+
+
+mixin breadcrumbs-item(text,href)
+    li.breadcrumbs__item
+        if(href)
+            a.breadcrumbs__link(href=href)=text
+        else
+            span=text
+
+mixin zebra-layout(arr)
+    each obj, index in arr
+        .row.zebra-layout__row
+            if index % 2 === 0
+                .col-sm-6.zebra-layout__img
+                    img(src=obj.img alt='')
+                .col-sm-6.zebra-layout__content
+                    .zebra-layout__title.title_medium_size
+                        if obj.href !== undefined
+                            a(href=obj.href)=obj.title
+                        else
+                            span=obj.title
+                    .zebra-layout__text!=obj.text
+                    button.btn.btn-primary.btn-tech.zebra-layout__button(type='button' data-toggle='modal' data-target='#callback-modal')
+                        span Заказать звонок
+            else
+                .col-sm-6.zebra-layout__content
+                    .zebra-layout__title.title_medium_size
+                        if obj.href !== undefined
+                            a(href=obj.href)=obj.title
+                        else
+                            span=obj.title
+                    .zebra-layout__text!=obj.text
+                    button.btn.btn-primary.btn-tech.zebra-layout__button(type='button' data-toggle='modal' data-target='#callback-modal')
+                        span Заказать звонок
+                .col-sm-6.zebra-layout__img
+                    img(src=obj.img alt='')
+
+mixin gallery(arr, className)
+    each obj in arr
+        .gallery__item(class!= (attributes.class !== undefined ? attributes.class: '') + ' ' + className + '__item')
+            a.gallery__link(href=obj.href)
+                img.gallery__img(src=obj.img title=obj.caption)
+
+mixin slider(arr, className)
+    .swiper-container(class=className)
+        .swiper-wrapper
+            each obj in arr
+                block slide
+        block controls
+
+include ../modules/buttons/button-mixin
+include ../modules/cards/custom-card-list-mixin
+include ../modules/cards/custom-card-mixin

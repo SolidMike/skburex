@@ -1,0 +1,48 @@
+footer.footer.bg-whitesmoke
+    .container
+        .row
+            .col-md-8.footer__left-side.left-side
+                .left-side__content
+                    .title_medium_size.left-side__title О КОМПАНИИ
+                    <p><img src="http://skburex.ru/wp-content/uploads/2016/02/bur11_yb2_41.png" style="float: left; width: 250px; height: 50px; margin:1rem;">Строительная компания ООО «БУРЭКС» предлагает профессиональные услуги по бурению скважин различного диаметра и глубины, в том числе и предназначенные для монтажа шпунтового ограждения. Мы осуществляем буровые работы  Москве и Московской области: 	укрепление грунтов, укрепление фундаментов, усиление грунтов, усиление грунтов основания фундаментов, усиление фундамента сваями, усиление фундаментов, усиление фундаментов буроинъекционными сваями.</p>
+            .col-md-4.footer__right-side.right-side
+                .right-side__content
+                    .title_medium_size.right-side__title КОНТАКТЫ
+                    -
+                        const footerContacts = [{icon: 'fa fa-phone', subtitle: '+7 (495) 229-96-01 ', href: 'tel:+74952299601'},
+                            {icon: 'fa fa-phone', subtitle: '+ 7 (926) 909-66-14', href: 'tel:+79269096614'},
+                            {icon: 'fa fa-envelope', subtitle: 'burex.msk@gmail.com', href: 'mailto:burex.msk@gmail.com'},
+                            {icon: 'fa fa-map-pin', subtitle: '111024, г.Москва, ул.Энтузиастов 2-я, д.5, пом.3, комната 8'},
+                            {icon: 'fa fa-map-pin', subtitle: '143002, Московская обл., г.Одинцово, ул.Акуловская, д.2а, офис 201'}]
+                    +widget(footerContacts, 'footer-contacts', false)
+                    .widget-item.footer-contacts__item.col-lg.col-md-12
+                        <span id="hotlog_counter"><a href="http://click.hotlog.ru/?2520952" target="_blank"><img src="http://hit34.hotlog.ru/cgi-bin/hotlog/count?0.2357269070395822&amp;s=2520952&amp;im=72&amp;r=&amp;pg=http%3A//skburex.ru/&amp;j=N&amp;wh=1680x1050&amp;px=24&amp;cver=1&amp;js=1.3" class="hotlog_counter" border="0" alt="HotLog" title="HotLog" width="88" height="31"></a></span>
+    .bg-white
+        .container
+            .row
+                .col-md-6.footer__requisites
+                    .requisites__item Прием к оплате
+                    .requisites__item
+                        <i class="fab fa-cc-visa"></i>
+                    .requisites__item
+                        <i class="fab fa-cc-mastercard"></i>
+                .col-md-6.footer__nav
+                    ul.nav
+                        li.nav-item
+                            a.nav-link.active(href='/') Главная
+                        li.nav-item
+                            a.nav-link(href='/technique-cat.html') Наша техника
+                        li.nav-item
+                            a.nav-link(href='/services.html') Услуги
+                        li.nav-item
+                            a.nav-link(href='/contacts.html') Контакты
+    .container
+        .row
+            .col-md-6.footer__signature
+                span
+                    | Строительная компания ООО «БУРЭКС» -
+                    a(href="#")
+                        b   буровые работы в Москве.
+            .col-md-6.footer__copyright
+                span
+                    | Все права защищены © 2009–2019 ООО «БУРЭКС»

@@ -1,0 +1,10 @@
+form {
+  .form-control:focus {
+    border-color: #c1a000;
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 0, 0.5);
+  }
+  textarea.form-control {
+    height: 15rem;
+    margin-bottom: 4rem;
+  }
+}

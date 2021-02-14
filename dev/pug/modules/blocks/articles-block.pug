@@ -1,0 +1,42 @@
+-
+    const articles = [{
+        'img': 'static/images/content/our-technique/berkut.jpg',
+        'href': '#',
+        'alt': 'В КАКИХ СЛУЧАЯХ ФУНДАМЕНТУ НЕОБХОДИМО УСИЛЕНИЕ?',
+        'title': 'В КАКИХ СЛУЧАЯХ ФУНДАМЕНТУ НЕОБХОДИМО УСИЛЕНИЕ?',
+        'descr': 'Автор burex',
+        badge: '23.04.2019'
+    },
+        {
+            'img': 'static/images/content/our-technique/hktc-hlc-8026.jpg',
+            'href': '#',
+            'alt': 'ОСНОВНЫЕ ОСОБЕННОСТИ ШПУНТОВОГО ОГРАЖДЕНИЯ',
+            'title': 'ОСНОВНЫЕ ОСОБЕННОСТИ ШПУНТОВОГО ОГРАЖДЕНИЯ',
+            'descr': 'Автор burex',
+            badge: '23.04.2019'
+        }]
+    const articlesList = [{
+        subtitle: 'Как происходит бурение скважин под фундамент',
+        text: 'Автор burex',
+        href: '#1'
+    }, {
+        subtitle: 'Способы восстановления поврежденного фундамента',
+        text: 'Автор burex',
+        href: '#2'
+    }, {
+        subtitle: 'Устройство и виды шпунтового ограждения котлована',
+        text: 'Автор burex',
+        href: '#3'
+    }, {
+        href: '/blog.html'
+    }]
+.container
+    .row
+        .col-md-12
+            .articles__title.section-title
+                span Статьи
+    .row
+        +cards(articles, 'articles')(class="col-md-4")
+        .col-md-4.d-flex.flex-column
+            .custom-cards-list.articles-list
+                +cards-list(articlesList, true, 'articles-list')

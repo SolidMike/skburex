@@ -1,0 +1,134 @@
+extends template/main
+
+block variables
+    - var title = 'Усиление фундаментов'
+    - let pageClass = 'foundationsPage'
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Услуги')
+                        +breadcrumbs-item('Усиление фундаментов')
+                        +breadcrumbs-item('Ремонт фундамента')
+    section.page-description#page-description
+        .container
+            .row
+                .col-sm-12
+
+    section.methods
+        .container
+            .row
+                .col-sm-12
+            .row.methods__list
+                -
+                    const methods = [
+                        {
+                            icon: '<i class="fa fa-cogs"></i>',
+                            text: 'Ремонт фундамента',
+                            href: '/uslugi/usilenie-fundamentov/remont-fundamenta',
+                            hrefText: 'ООО "БУРЭКС" выполняет сложные ремонтные работы по восстановлению различных типов фундамента.'
+                        },
+                        {
+                            icon: '<i class="fa fa-cogs"></i>',
+                            text: 'Реконструкция фундамента',
+                            href: '/uslugi/usilenie-fundamentov/rekonstruktsiya-fundamenta',
+                            hrefText: 'Реконструкция фундамента направлена на восстановление строений в целях продления их срока службы.'
+                        },
+                        {
+                            icon: '<i class="fa fa-cogs"></i>',
+                            text: 'Подводка фундаментов',
+                            href: '/uslugi/usilenie-fundamentov/podvodka-fundamentov',
+                            hrefText: 'Подводка фундаментов - это сложная операция по полной или фрагментарной замене фундамента.'
+                        },
+                        {
+                            icon: '<i class="fa fa-cogs"></i>',
+                            text: 'Усиление полов',
+                            href: '/uslugi/usilenie-fundamentov/usilenie-polov',
+                            hrefText: 'Усиление полов - это восстановление целостности и повышение несущей способности полов.'
+                        },
+                        {
+                            icon: '<i class="fa fa-cogs"></i>',
+                            text: 'Усиление строительных конструкций',
+                            href: '/usilenie-fundamentov/usilenie-stroitelnyih-konstruktsiy',
+                            hrefText: 'Данные работы зависят от вида строительных конструкционных материалов и объема.'
+                        },
+                        {
+                            icon: '<i class="fas fa-tools"></i>',
+                            text: 'Устройство ростверков',
+                            href: '/uslugi/usilenie-fundamentov/ustroystvo-rostverkov',
+                            hrefText: 'Устройство ростверков предотвращает обрушение грунтовых стенок и защищает котлован от попадания грунтовых вод.'
+                        },
+                        {
+                            icon: '<i class="fas fa-tools"></i>',
+                            text: 'Устройство фундаментных плит',
+                            href: '/uslugi/usilenie-fundamentov/ustroystvo-fundamentnyih-plit',
+                            hrefText: 'Представляет собой монолитную железобетонную конструкцию, которая занимает всю площадь под строящимся зданием.'
+                        },
+                        {
+                            icon: '<i class="fas fa-tools"></i>',
+                            text: 'Цементация грунтов',
+                            href: '/uslugi/usilenie-fundamentov/tsementatsiya-gruntov',
+                            hrefText: 'Цементация грунтов представляет собой нагнетание под подошву и непосредственно в фундамент цементного состава.'
+                        },
+                        {
+                            icon: '<i class="fas fa-tools"></i>',
+                            text: 'Цементация фундаментов',
+                            href: '/uslugi/usilenie-fundamentov/tsementatsiya-fundamentov',
+                            hrefText: 'Преобразование строительных свойств грунтов нагнетанием под давлением цементирующих растворов.'
+                        },
+                        {
+                            icon: '<i class="fas fa-tools"></i>',
+                            text: 'Инъекция кирпичной кладки',
+                            href: '/uslugi/usilenie-fundamentov/inektsiya-kirpichnoy-kladki',
+                            hrefText: 'Укрепление кладки путем инъектирования в поврежденные участки модифицированных цементных растворов.'
+                        },
+                        {
+                            icon: '<i class="fas fa-cog"></i>',
+                            text: 'Закрепление известняков карстовых грунтов',
+                            href: '/uslugi/usilenie-fundamentov/zakreplenie-izvestnyakov-karstovyih-gruntov',
+                            hrefText: 'Предотвращение провалов и просадок, которые с годами преобразуются в карстовые воронки и проседания.'
+                        },
+                        {
+                            icon: '<i class="fas fa-cog"></i>',
+                            text: 'Закрепление грунтов методом смолизации',
+                            href: '/uslugi/usilenie-fundamentov/zakreplenie-gruntov-metodom-smolizatsii',
+                            hrefText: 'Закрепление грунтов, используемое при усилении основания фундаментов, стоящих на сухих и водонасыщенных песках.'
+                        },
+                        {
+                            icon: '<i class="fas fa-cog"></i>',
+                            text: 'Закрепление грунтов методом силикатизации',
+                            href: '/uslugi/usilenie-fundamentov/zakreplenie-gruntov-metodom-silikatizatsii',
+                            hrefText: 'Искусственное закрепление почвы химическим способом с использованием силикатных растворов.'
+                        },
+                        {
+                            icon: '<i class="fas fa-cog"></i>',
+                            text: 'Закрепление грунтов',
+                            href: '/uslugi/usilenie-fundamentov/zakreplenie-gruntov',
+                            hrefText: 'Нагнетание в грунт цементного молока, жидкого стекла, битума, синтетических смол или иных вяжущих, затвердевающих при определенных условиях.'
+                        },
+                        {
+                            icon: '<i class="fas fa-cog"></i>',
+                            text: 'Усиление фундамента',
+                            href: '/uslugi/usilenie-fundamentov',
+                            hrefText: 'Усиление фундаментов является важной частью капитального ремонта и имеет большое значение при эксплуатации зданий и сооружений.'
+                        },
+                    ]
+                each meth in methods
+                    .methods__item.col-md.col-sm-6
+                        .methods__icon
+                            !=meth.icon
+                        .methods__text=meth.text
+                        a.methods__link(href=meth.href)
+                            .methods__link-text
+                                =meth.hrefText
+    section.seo#seo
+        include ./modules/blocks/seo-block
+    section.price-download.bg-dark-img#price-download
+        include ./modules/blocks/price-download-block
+    section.partnership#partnership
+        include ./modules/blocks/partnership-block
+    section.feedback#feedback
+        include ./modules/blocks/feedback-block

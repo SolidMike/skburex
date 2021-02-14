@@ -1,0 +1,91 @@
+extends template/main
+
+block variables
+    - var title = 'Каталог';
+    - let pageClass = 'catalog-page'
+    -
+        const ourTechnique = [{
+            'img': 'static/images/content/our-technique/berkut.jpg',
+            'href': '#',
+            'alt': 'Беркут',
+            'title': 'Беркут',
+            'descr': 'УБГ-С «Беркут» - одна из самых мощных буровых установок данной серии на гусеничной',
+            badge: 'звоните!'
+        },
+            {
+                'img': 'static/images/content/our-technique/hktc-hlc-8026.jpg',
+                'href': '#',
+                'alt': 'hlc-8026',
+                'title': 'HKTC HLC-8026',
+                'descr': 'Бурильно-крановая установка HKTC HLC-8026',
+                badge: 'звоните!'
+            },
+            {
+                'img': 'static/images/content/our-technique/bauer-bg-15-36.jpg',
+                'href': '#',
+                'alt': 'bauer-bg-15-36',
+                'title': 'Bauer BG 15-36',
+                'descr': 'Буровые работы на установках Bauer BG36H и Bauer BG15',
+                badge: 'звоните!'
+            },
+            {
+                'img': 'static/images/content/our-technique/alligator.jpg',
+                'href': '#',
+                'alt': 'Аллигатор',
+                'title': 'Аллигатор',
+                'descr': 'Буровая установка гидрофицированная легкой серии на гусеничной базе',
+                badge: 'звоните!'
+            },
+            {
+                'img': 'static/images/content/our-technique/sterh.jpg',
+                'href': '#',
+                'alt': 'Стерх',
+                'title': 'Стерх',
+                'descr': 'СБГ-ПМ3 СТЕРХ - буровой станок гидрофицированный переносной модульный',
+                badge: 'звоните!'
+            }];
+
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Наша техника')
+    section.page-description#page-description
+        .container
+            .row
+                .col-sm-12
+                    p
+                        | Буровые работы — это комплекс мероприятий по разрушению пород грунта с целью устройства свай для последующего строительства. Они выполняются с помощью специализированного оборудования: буровые установки, средства механизации, силовые агрегаты, электро и пневмооборудование, бурильные трубы и долота.
+                        h2 Строительная компания «БУРЭКС»
+                        h2 предоставляет в аренду такую технику
+    section.technique-catalog#technique-catalog
+        .container
+            .row
+                +cards(ourTechnique, 'technique')(class="col-md-6 col-sm-12")
+    section.price-download.bg-dark-img#price-download
+        include modules/blocks/price-download-block
+    section.gallery.bg-whitesmoke#gallery
+        -
+            let gallery = [
+                {href: 'static/images/content/tech-cat/asset8.jpeg', img: 'static/images/content/tech-cat/asset8.jpeg', caption: '6'},
+                {href: 'static/images/content/tech-cat/asset9.jpeg', img: 'static/images/content/tech-cat/asset9.jpeg', caption: '7'},
+                {href: 'static/images/content/tech-cat/asset10.jpeg', img: 'static/images/content/tech-cat/asset10.jpeg', caption: '8'},
+                {href: 'static/images/content/tech-cat/asset11.jpeg', img: 'static/images/content/tech-cat/asset11.jpeg', caption: '9'},
+                {href: 'static/images/content/tech-cat/asset12.jpeg', img: 'static/images/content/tech-cat/asset12.jpeg', caption: '10'},
+                {href: 'static/images/content/tech-cat/asset13.jpeg', img: 'static/images/content/tech-cat/asset13.jpeg', caption: '11'},
+                {href: 'static/images/content/tech-cat/asset14.jpeg', img: 'static/images/content/tech-cat/asset14.jpeg', caption: '12'},
+                {href: 'static/images/content/tech-cat/asset15.jpeg', img: 'static/images/content/tech-cat/asset15.jpeg', caption: '13'},
+                {href: 'static/images/content/tech-cat/p11-768x768.jpg', img: 'static/images/content/tech-cat/p11-768x768.jpg', caption: '13'},
+                {href: 'static/images/content/tech-cat/p111-768x768.jpg', img: 'static/images/content/tech-cat/p111-768x768.jpg', caption: '13'},
+                {href: 'static/images/content/tech-cat/p1111-768x768.jpg', img: 'static/images/content/tech-cat/p1111-768x768.jpg', caption: '13'},
+                {href: 'static/images/content/tech-cat/p11111-768x768.jpg', img: 'static/images/content/tech-cat/p11111-768x768.jpg', caption: '13'},
+                ]
+        .container
+            .row
+                +gallery(gallery, 'cat-gallery')(class="col-lg-2 mb-4")
+    section.feedback#feedback
+        include modules/blocks/feedback-block
+

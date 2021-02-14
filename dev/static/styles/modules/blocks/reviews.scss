@@ -1,0 +1,127 @@
+.reviews {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  blockquote {
+    background-color: $white;
+    padding: 2.25rem 2.8125rem 1.3125rem;
+    margin: .1rem .1rem 2rem .1rem ;
+    position: relative;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.05), 0 2px 6px 0 rgba(0,0,0,.12);
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: -.8125rem;
+      left: 2.8125rem;
+      width: 30px;
+      height: 25px;
+      background-color: $white;
+      -webkit-transform: skewY(-40deg);
+      transform: skewY(-40deg);
+      box-shadow: -2px 2px 4px -1px rgba(0,0,0,.12);
+    }
+  }
+  &__author {
+    font-size: .875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__author-name {
+    font-style: normal;
+    color: $darkslategray;
+  }
+  &__author-description {
+    color: $darkgoldenrod;
+  }
+  &__item {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__rating {
+
+  }
+  &__stars {
+    pointer-events: none;
+  }
+  &__date {
+
+  }
+}
+
+.reviews-slider {
+  &__buttons-wrapper {
+    display: inline-flex;
+    background: $white;
+    padding-left: 2rem;
+  }
+  &__btn-prev {
+    margin-right: .5rem!important;
+  }
+  &__btn-prev,
+  &__btn-next {
+    position: initial;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: $lightgray;
+    border-radius: .1rem;
+    &:focus {
+      outline: none;
+    }
+    i {
+      font-size: 1.2rem;
+      color: $darkgray;
+    }
+    &:hover {
+      i {
+        color: $darkslategray;
+      }
+    }
+  }
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label,
+.rating>input:checked~label {
+  color: #fabd00;
+}
+.rating>input:not([readonly]):checked+label:hover,
+.rating>input:not([readonly]):checked~label:hover,
+.rating>input:not([readonly]):checked~label:hover~label,
+.rating>label:not([readonly]):hover~input:checked~label {
+  color: #d6a200;
+}
+.rating>input:not([readonly])+label {
+  cursor: pointer;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  width: 100%;
+  &>input {
+    display: none;
+  }
+  &>label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    margin: 0 3px;
+    &:before {
+      font-size: 30px;
+      display: inline-block;
+      content: "★";
+      pointer-events: none;
+    }
+  }
+}

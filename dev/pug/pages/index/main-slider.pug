@@ -1,0 +1,21 @@
+-
+    const mainSlider = [
+        {img: 'static/images/content/main-slider/main-slider-1.jpg', title: 'Технические скважины', descr: 'Работы выполняются с применением современных буровых\n' +
+                    '                        установок типа УБГ-С «Беркут», УБГ-Л2 «Аллигатор» на\n' +
+                    '                        гусеничной базе, а также переносных буровых установок типа СБГ «Стерх».'},
+        {img: 'static/images/content/main-slider/main-slider-2.jpg', title: 'Буровые работы', descr: 'ООО БУРЭКС выполняет полный комплекс свайных работ,\n' +
+                    '                        включающий расчет свайного фундамента, проектирование,\n' +
+                    '                        качественное и надежное устройство свайных полей'}]
++slider(mainSlider, 'main-slider')
+    block slide
+        .swiper-slide
+            img(src=obj.img alt="main-slider-1")
+            .swiper-slide__caption
+                .swiper-slide__title.title=obj.title
+                .swiper-slide__descr
+                    p #{obj.descr}
+    block controls
+        .swiper-button-prev(class=className + '__btn-prev')
+            i.fas.fa-chevron-left
+        .swiper-button-next(class=className + '__btn-next')
+            i.fas.fa-chevron-right

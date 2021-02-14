@@ -1,0 +1,48 @@
+-
+    const contacts = [{'icon' : 'fa fa-phone', 'title' : 'АДРЕС:', subtitle: '143002, Московская обл., г.Одинцово, ул.Акуловская, д.2а, офис 201'},
+                    {'icon' : 'fa fa-fax', 'href' : 'tel:74952299601', 'title' : 'телефон', subtitle: '+ 7 (926) 909-66-14'},
+                    {'icon' : 'fa fa-envelope', 'href' : 'mailto:burex.msk@gmail.com', 'title' : 'E-MAIL:', subtitle: 'burex.msk@gmail.com'}]
+
+    const workingHours = [
+        {left: 'Понедельник', right: '09:00-19:00'}, {left: 'Вторник', right: '09:00-19:00'}, {left: 'Среда', right: '09:00-19:00'},
+        {left: 'Четверг', right: '09:00-19:00'}, {left: 'Пятница', right: '09:00-19:00'}, {left: 'Суббота', right: '09:00-19:00'},
+        {left: 'Воскресенье'}]
+.container
+    .row
+        .col-md-4
+            .feedback__title.title.right-line
+                span Контакты
+            +widget(contacts, 'feedback', false)
+            .feedback__working-hours.custom-table
+                .feedback__subtitle.title_medium_size
+                    span Режим работы
+                +table(workingHours, 'working-hours')
+        .col-md-8
+            .title.right-line
+                span Обратная связь
+            form.feedback__form
+                .form-row
+                    .form-group.col-md-6
+                        label(for='inputName')
+                        input#inputName.form-control(type='text' placeholder='Ваше имя*')
+                    .form-group.col-md-6
+                        label(for='inputEmail')
+                        input#inputEmail.form-control(type='email' placeholder='Email*')
+                    .form-group.col-md-6
+                        label(for='inputTel')
+                        input#inputTel.form-control(type='tel' placeholder='Телефон')
+                    .form-group.col-md-6
+                        label(for='inputOrganizaton')
+                        input#inputOrganizaton.form-control(type='text' placeholder='Организация')
+                .form-group
+                    label(for='message')
+                    textarea#message.form-control(rows='3' placeholder='Сообщение')
+                .form-group
+                    .form-check
+                        input#gridCheck.form-check-input(type='checkbox')
+                        label.form-check-label(for='gridCheck')
+                            | Нажимая на кнопку, вы даете согласие на обработку своих
+                            a(href="#privacy-policy-modal" data-toggle="modal" data-target="#privacy-policy-modal")  персональных данных.
+                .btn-wrapper
+                    span Поля помеченные * обязательны для заполнения.
+                    button.btn.btn-primary.btn-tech.feedback__btn(type='submit') Отправить

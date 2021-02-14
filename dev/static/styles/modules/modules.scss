@@ -1,0 +1,35 @@
+@import "buttons/buttons";
+@import "footer/footer";
+@import "header/header";
+@import "main-nav/main-nav";
+@import "forms/forms";
+@import "forms/modals";
+@import "sticky-nav/sticky-nav";
+@import "blocks/search";
+
+//Карточки
+@import "cards/custom-card";
+@import "cards/custom-cards-list";
+
+//Блоки
+@import "blocks/widget-panel-block";
+@import "galleries/work-types-block";
+@import "blocks/our-technique-block";
+@import "blocks/services-block";
+@import "blocks/price-download-block";
+@import "blocks/services-cost-block";
+@import "blocks/articles-block";
+@import "blocks/partnership-block";
+@import "blocks/clients-block";
+@import "blocks/feedback-block";
+@import "blocks/maps-block";
+@import "blocks/blog";
+@import "blocks/reviews";
+@import "blocks/methods";
+
+//Галереи
+@import "galleries/about-gallery";
+
+//Слайдеры
+@import "sliders/main-slider";
+@import "sliders/portfolio-slider";

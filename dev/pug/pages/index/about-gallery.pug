@@ -1,0 +1,66 @@
+.container
+    .row
+        .col-sm-12
+            .about-gallery__title.title.right-line
+                span О компании
+    .row
+        .about-gallery__wrapper.col-sm-12
+            -
+                const aboutItems = [{
+                    href: 'static/images/content/about-gallery/about-gallery-1.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-1.jpeg',
+                    caption: 'описание-1'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-2.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-2.jpeg',
+                    caption: 'описание-2'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-3.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-3.jpeg',
+                    caption: 'описание-3'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-4.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-4.jpeg',
+                    caption: 'описание-4'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-5.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-5.jpeg',
+                    caption: 'описание-5'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-6.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-6.jpeg',
+                    caption: 'описание-6'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-7.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-7.jpeg',
+                    caption: 'описание-7'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-8.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-8.jpeg',
+                    caption: 'описание-8'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-9.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-9.jpeg',
+                    caption: 'описание-9'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-10.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-10.jpeg',
+                    caption: 'описание-10'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-11.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-11.jpeg',
+                    caption: 'описание-11'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-12.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-12.jpeg',
+                    caption: 'описание-12'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-13.jpeg',
+                    img: 'static/images/content/about-gallery/about-gallery-13.jpeg',
+                    caption: 'описание-13'
+                }, {
+                    href: 'static/images/content/about-gallery/about-gallery-14.jpg',
+                    img: 'static/images/content/about-gallery/about-gallery-14.jpg',
+                    caption: 'описание-14'
+                }]
+            +gallery(aboutItems, 'about-gallery')

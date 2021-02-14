@@ -1,0 +1,23 @@
+.blog {
+  &__item {
+    .custom-card {
+      &__title {
+        border-bottom: none;
+        font-weight: 900;
+        text-transform: none;
+        font-size: 2rem;
+      }
+    }
+  }
+  .meta {
+    z-index: 1;
+    padding: 1rem;
+    border-top: 1px solid $darkgray;
+    i {
+      margin-right: .5rem;
+    }
+    &__item {
+      margin-right: 1rem;
+    }
+  }
+}

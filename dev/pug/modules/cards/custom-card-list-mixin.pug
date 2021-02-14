@@ -1,0 +1,15 @@
+mixin cards-list(params, readAll, className)
+    each val, index in params
+        if params.length === index + 1 && readAll === true
+            .custom-cards-list__item(class= className + '__item')
+                if val.href !== undefined
+                    a.custom-cards-list__link(class= className + '__link' href=val.href)
+                        span Читать все
+        else
+            .custom-cards-list__item(class= className + '__item')
+                if val.num !== undefined
+                    .custom-cards-list__num(class= className + '__num')=val.num
+                .custom-cards-list__subtitle(class= className + '__subtitle')=val.subtitle
+                .custom-cards-list__text(class= className + '__text')=val.text
+                if val.href !== undefined
+                    a.custom-cards-list__link(class= className + '__link' href=val.href)

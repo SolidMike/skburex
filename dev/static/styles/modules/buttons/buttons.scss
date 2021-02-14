@@ -1,0 +1,47 @@
+.btn-tech {
+  margin: 0 auto;
+  color: $white;
+  background: #c1a000 linear-gradient(to top,#c1a000,#dbb500);
+  border-color: $darkgoldenrod;
+  display: block;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.35);
+  border-radius: .125rem;
+  &:hover,
+  &:focus {
+    background: $darkgoldenrod;
+    border-color: $darkgoldenrod;
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 0, 0.5);
+  }
+  &:active {
+    background: #890017!important;
+    border-color: #7f0015!important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+  &:active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5)!important;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $white;
+  }
+}
+
+#toTop {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  opacity: 0.7;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  display: none;
+  z-index: 15;
+  i {
+    transform: translateY(10px);
+  }
+}
+#toTop:hover {
+  opacity: 1;
+}

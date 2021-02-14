@@ -1,0 +1,87 @@
+footer { flex: 0 0 auto; }
+.footer {
+  margin: 2rem 0 0 0;
+  overflow: hidden;
+  &__right-side,
+  &__left-side {
+    padding: 2rem;
+    @include media-breakpoint-down(sm) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  &__left-side {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      background: $whitesmoke;
+    }
+  }
+  &__right-side {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      background: url('../images/general/dark-pattern-bg.jpg');
+    }
+  }
+  .right-side {
+    &__content {
+      position: relative;
+      color: $white;
+    }
+    &__title {
+      color: $white;
+    }
+  }
+  .left-side {
+    &__content {
+      position: relative;
+    }
+  }
+  &__requisites,
+  &__nav,
+  &__signature,
+  &__copyright{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav {
+      font-weight: 800;
+      text-transform: uppercase;
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+    }
+  }
+  .requisites__item {
+    padding: .5rem 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    i {
+      font-size: 2.5rem;
+    }
+  }
+  .footer-contacts {
+    &__item {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }
+}

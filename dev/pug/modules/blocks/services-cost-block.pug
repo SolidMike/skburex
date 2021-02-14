@@ -1,0 +1,28 @@
+-
+    const servicesCost = [{
+        badge: 'Диаметр бурения',
+        right: 'Стоимость работ, руб/м'},
+        {left: '50', right: '150'}, {left: '75', right: '150'}, {left: '90', right: '150'},
+        {left: '100', right: '150'}, {left: '110', right: '150'}, {left: '130', right: '180'},
+        {left: '150', right: '180'}, {left: '180', right: '180'}, {left: '200', right: '180'},
+        {left: '230', right: '180'}, {left: '250', right: '180'}, {left: '270', right: '200'}]
+.container
+    .row
+        .col-md-4
+            .services-cost__content
+                <p style="text-align: justify;">Компания ООО «БУРЭКС» предлагает заказчикам проведение различных буровых работ, в том числе бурение шнековым, колонковым и многими другими способами.</p><p>&nbsp;</p><p style="text-align: justify;">Из-за своей трудоемкости данные виды работ стоит доверять только профессионалам, которые имеют достаточный опыт и необходимую квалификацию.</p><p>&nbsp;</p><p style="text-align: justify;">Московская буровая компания ООО «БУРЭКС» располагает специализированным оборудованием и механизированной буровой техникой, а также штатом опытных сотрудников, которые справятся с задачей любой сложности.</p><p>&nbsp;</p><p>&nbsp;</p>
+            +button('a', 'btn-tech', 'Контакты', 'padding: 1rem 1.9rem; max-width: 165px; margin-left: 0;', '/contacts.html', '_self', 'padding: 1rem 0;')
+        .col-md-8
+            .services-cost__title.title_medium_size Буровые работы / стоимость услуг
+            .row
+                .col-md-6.services-cost__item
+                    .services-cost__list.custom-table
+                        +table(servicesCost, 'services-cost')
+                .col-md-6.services-cost__item
+                    .services-cost__list.custom-table
+                        +table(servicesCost, 'services-cost')
+                .col-md-12
+                    p
+                        | Компания ООО «БУРЭКС» выполняет буровые работы в соответствии с требованиями СНиП 1.02.07-87, с учетом требований, изложенных в ГОСТ 20276-85, ГОСТ 23278-78, ГОСТ 23741-73, РСН 31-83.
+                    +button('a', 'btn-tech', 'прайс-лист', 'padding: 1rem 1.9rem; max-width: 165px; margin-left: 0;', '#', '_self', 'padding: 1rem 0;')
+

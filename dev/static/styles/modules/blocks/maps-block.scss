@@ -1,0 +1,15 @@
+.maps-block {
+  &__container {
+    text-align: center;
+    @include media-breakpoint-down(xs) {
+      margin-top: 1rem;
+    }
+  }
+  &__title {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__map {
+    margin: 1rem 0 0 0;
+  }
+}

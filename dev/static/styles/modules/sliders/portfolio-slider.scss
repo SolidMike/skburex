@@ -1,0 +1,38 @@
+.portfolio-page {
+  .portfolio-slider {
+    max-width: 600px;
+    height: 400px;
+    &__btn-next,
+    &__btn-prev {
+      font-size: 4rem;
+      color: $darkgoldenrod;
+      &:focus {
+        outline: none;
+      }
+    }
+    .swiper-slide {
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        width: 100%;
+      }
+    }
+  }
+  .swiper-pagination {
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, .7);
+    padding: .5rem 0;
+    bottom: 0;
+  }
+  .swiper-pagination-bullet {
+    background-color: darkgoldenrod;
+    width: 16px;
+    height: 16px;
+  }
+  .portfolio-gallery__item {
+    height: calc(225px + 5vw);
+  }
+}

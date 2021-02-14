@@ -1,0 +1,45 @@
+.main-slider {
+  .swiper-slide {
+    img {
+      display: block;
+      width: 100%;
+      height:auto;
+      position: relative;
+    }
+    &__caption {
+      position: absolute;
+      display: inline-block;
+      left: 40%;
+      top: 50%;
+      transform: translate(-60%,-50%);
+      max-width: 500px;
+      color: $white;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+    &__title {
+      text-align: left;
+      color: $white;
+    }
+    &__descr {
+      font-size: 18px;
+    }
+  }
+  &__btn-prev,
+  &__btn-next {
+    font-size: 1.875rem;
+    width: 3.75rem;
+    height: 7.5rem;
+    line-height: 7.75rem;
+    color: $black;
+    opacity: .6;
+    background-color: $white;
+    @include media-breakpoint-down(md) {
+      height: 4.5rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

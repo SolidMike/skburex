@@ -1,0 +1,89 @@
+extends template/main
+
+block variables
+    - var title = 'Отзывы';
+    - let pageClass = 'comments-page'
+
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Отзывы')
+    section.page-description#page-description
+        .container
+            .row
+                .col-sm-12
+                    .section-title
+    section.comments.reviews
+        .container
+            .row
+                .col-md-12.reviews__item
+                    blockquote
+                        p.reviews__quote
+                            |какой-то коммент
+                    .reviews__footer
+                        .reviews__author
+                            cite.reviews__author-name
+                                |какой-то автор
+                            .reviews__author-description
+                                |какое-то описание
+                        .reviews__rating
+                            .reviews__stars.rating(data-star-value='[[+properties.starrating]]')
+                                input(type='radio' name='rating-[[+id]]' readonly='' value='5')
+                                label.full
+                                input(type='radio' name='rating-[[+id]]' readonly='' value='4')
+                                label.full
+                                input(type='radio' name='rating-[[+id]]' readonly='' value='3')
+                                label.full
+                                input(type='radio' name='rating-[[+id]]' readonly='' value='2')
+                                label.full
+                                input(type='radio' name='rating-[[+id]]' readonly='' value='1')
+                                label.full
+                            .reviews__date [[+date_ago]]
+
+    section.screen.comments-leave
+        .container
+            .row
+                .reviews-leave__form.col
+                    .reviews-leave__title.title.right-line
+                        span Оставьте ваш отзыв
+                    form#comment-form.comment-form.form(action='' method='post' autocomplete='off')
+                        input(type='hidden' name='thread' value='')
+                        input(type='hidden' name='parent' value='0')
+                        input(type='hidden' name='id' value='0')
+                        .form-group
+                            label(for='inputName')
+                            input#inputName.form-control.form-control_border.required(type='text' name='name' value='' placeholder='Ваше имя' autocomplete='off')
+                            span.error
+                        .rating.form-group
+                            input#starrating(type='number' name='starrating' max='5' min='1' value='5')
+                            input#star5(type='radio' name='rating' value='5' checked='checked')
+                            label.full(for='star5')
+                            input#star4(type='radio' name='rating' value='4')
+                            label.full(for='star4')
+                            input#star3(type='radio' name='rating' value='3')
+                            label.full(for='star3')
+                            input#star2(type='radio' name='rating' value='2')
+                            label.full(for='star2')
+                            input#star1(type='radio' name='rating' value='1')
+                            label.full(for='star1')
+                        .form-group.hidden
+                            label(for='inputEmail')
+                            input#inputEmail.form-control(type='text' name='email' value='' placeholder='Ваш email')
+                            span.error
+                        .form-group
+                            label(for='message')
+                            textarea#message.form-control.form-control_border.form-control__textarea(name='text' cols='30' rows='10' placeholder='Ваше сообщение')
+                            span.error
+                        .form-group
+                            .form-check
+                                input#gridCheck.form-check-input(type='checkbox')
+                                label.form-check-label(for='gridCheck')
+                                    | Нажимая на кнопку, вы даете согласие на обработку своих
+                                    a(href="#privacy-policy-modal" data-toggle="modal" data-target="#privacy-policy-modal")  персональных данных.
+                        .btn-wrapper
+                            span Поля помеченные * обязательны для заполнения.
+                            button.btn.btn-primary.btn-tech.feedback__btn(type='submit') Отправить

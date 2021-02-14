@@ -1,0 +1,73 @@
+.custom-cards-list {
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.05), 0 2px 6px 0 rgba(0,0,0,.12);
+    background-color: $white;
+    flex: 1;
+  &__item {
+    border-bottom: 1px solid $lightgray;
+    position: relative;
+    padding: 1.5rem 2rem 1.5rem 3rem;
+    &:hover {
+      .custom-cards-list__num {
+        background: $darkgoldenrod;
+      }
+    }
+    &:last-child {
+      .custom-cards-list__link {
+        font-weight: 700;
+        &:before {
+          position: absolute;
+          display: block;
+          content: '\f054';
+          font-family: 'Font Awesome 5 Free';
+          top: calc(50% - .9375rem);
+          font-size: .625rem;
+          right: .9375rem;
+          padding-left: .0625rem;
+          padding-top: .5rem;
+          background-color: #ddd;
+          color: #999;
+          border-radius: .125rem;
+          width: 1.875rem;
+          height: 1.875rem;
+          text-align: center;
+          transition: all .1s ease-out;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+      content: "";
+      background-color: rgba(0,0,0,0);
+    }
+  }
+  &__num {
+    position: absolute;
+    background-color: $lightgray;
+    color: $white;
+    font-weight: 800;
+    top: 1.25rem;
+    line-height: 2rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    text-align: center;
+    transition: all .1s ease-out;
+    font-size: .875rem;
+    left: 0;
+  }
+  &__subtitle {
+    font-weight: 800;
+    font-size: .875rem;
+    text-transform: uppercase;
+    color: $darkslategray;
+  }
+}

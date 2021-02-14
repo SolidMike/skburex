@@ -1,0 +1,32 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$darkslategray: #292929;
+$lightslategray: #444444;
+$darkgoldenrod: #c1a000;
+$darkgray: #9c9c9c;
+$lightgray: #cccccc;
+$whitesmoke: #eeeeee;
+$dimgray: #666666;
+
+// Sizes
+$base-font-size: 14px;
+$min_width: 320px;
+$max_width: 1920px;
+$min_font: 32px;
+$max_font: 40px;
+
+$breakpoints: (
+  "phone"       : 400px,
+  "phone-wide"  : 480px,
+  "phablet"     : 560px,
+  "tablet-small": 640px,
+  "tablet"      : 768px,
+  "tablet-wide" : 1024px,
+  "desktop"     : 1248px,
+  "desktop-wide": 1440px
+);
+
+$content-size: 1140px;
+
+// Fonts

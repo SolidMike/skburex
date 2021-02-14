@@ -1,0 +1,58 @@
+-
+    const workTypes =
+            [{
+                'img': 'static/images/content/work-types/work-img1.jpg',
+                'caption': 'буровые работы',
+                'href': '#'
+            }, {'img': 'static/images/content/work-types/work-img2.jpg', 'caption': 'буронабивные сваи', 'href': '#'}
+                , {
+                'img': 'static/images/content/work-types/work-img3.jpg',
+                'caption': 'буроинъекционные сваи',
+                'href': '#'
+            }, {'img': 'static/images/content/work-types/work-img4.jpg', 'caption': 'шпунтовое ограждение', 'href': '#'}
+                , {
+                'img': 'static/images/content/work-types/work-img5.jpg',
+                'caption': 'сваи рит',
+                'href': '#'
+            }, {
+                'img': 'static/images/content/work-types/work-img6.jpg',
+                'caption': 'Буронабивные сваи методом CFA (НПШ)',
+                'href': '#'
+            }
+                , {
+                'img': 'static/images/content/work-types/work-img7.jpg',
+                'caption': 'Усиление фундаментов',
+                'href': '#'
+            }, {'img': 'static/images/content/work-types/work-img8.jpg', 'caption': 'Сваи ВПТ', 'href': '#'}
+                , {
+                'img': 'static/images/content/work-types/work-img9.jpg',
+                'caption': 'Работы в стесненных условиях',
+                'href': '#'
+            }, {
+                'img': 'static/images/content/work-types/work-img10.jpg',
+                'caption': 'Анкера, технические скважины',
+                'href': '#'
+            }
+                , {
+                'img': 'static/images/content/work-types/work-img11.jpg',
+                'caption': 'Инъектирование грунтов',
+                'href': '#'
+            }, {
+                'img': 'static/images/content/work-types/work-img12.jpg',
+                'caption': 'Аренда бурового оборудования',
+                'href': '#'
+            }]
+
+
+.container
+    .row
+        .col-sm-12
+            .work-types__title.section-title
+                span Виды работ
+    .row
+        each item in workTypes
+            .work-types__item.col-lg-3.col-md-4.col-sm-6
+                a(href=item.href class='work-types__link')
+                    img(src=item.img class='work-types__img')
+                    .work-types__caption
+                        span #{item.caption}

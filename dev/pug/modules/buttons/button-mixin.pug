@@ -1,0 +1,8 @@
+mixin button(type,className,text,btnSize,href,target,wrapperSize='')
+    if wrapperSize !== ''
+        .btn-wrapper(style=wrapperSize)
+            #{type}(class='btn btn-primary ' + className href=href target=target style=btnSize)
+                span #{text}
+    else
+        #{type}(class='btn btn-primary ' + className href=href target=target style=btnSize)
+            span #{text}

@@ -1,0 +1,17 @@
+extends template/main
+
+block variables
+    - var title = 'Контакты';
+    - let pageClass = 'contacts-page'
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Контакты')
+    section.feedback#feedback
+        include modules/blocks/feedback-block
+    section.maps#maps
+        include pages/contacts/maps-block

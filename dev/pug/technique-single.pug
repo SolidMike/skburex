@@ -1,0 +1,44 @@
+extends template/main
+
+block variables
+    - var title = 'Беркут'
+    - let pageClass = 'equipment-page'
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Наша техника', '/technique.html')
+                        +breadcrumbs-item('беркут')
+    section.zebra-layout
+        -
+            const techniqueSingle = [
+                        {
+                            img: 'static/images/content/technique-single/asset3.jpeg',
+                            title: 'Буровые работы на установках Беркут',
+                            text: '<div class="icon-box"> <i class="fa  fa-phone"></i><div class="icon-box__text"><div class="icon-box__title h4">+ 7 (926) 909-66-14</div> <span class="icon-box__subtitle">+7 (495) 229-96-01 доб.293</span></div></div>'
+                        },
+                        {
+                            img: 'static/images/content/technique-single/asset4.jpeg',
+                            title: 'Строительная компания «БУРЭКС»',
+                            text: 'Буровые работы — это комплекс мероприятий по разрушению пород грунта с целью исследования геологических особенностей территории для последующего строительства, а также обустройства скважин с целью добычи полезных ископаемых или воды.'
+                        },
+                        {
+                            img: 'static/images/content/technique-single/asset5.jpeg',
+                            title: 'Буровые работы',
+                            text: 'Буровые работы на установках Беркут выполняются с помощью специализированного оборудования: буровые установки, средства механизации, силовые агрегаты, электро и пневмооборудование, бурильные трубы и долота.'
+                        },
+                        {
+                            img: 'static/images/content/technique-single/asset6.jpeg',
+                            title: 'Бурение скважин',
+                            text: 'бурение скважин шнековым способомроторное бурение;колонковое бурениебурение под защитой бентонитового раствора;алмазное бурение;бурение асфальта;бурение бетона;бурение насыпных грунтов.'
+                        },
+                        {
+                            img: 'static/images/content/technique-single/asset7.jpeg',
+                            title: 'Свяжитесь с нами!',
+                            text: 'Чтобы заказать Буровые работы на установках Беркут, свяжитесь с нами любым удобным для вас способом! Будем рады помочь Вам!<img src="static/images/content/technique-single/asset8.png">'
+                    }]
+        .container
+            +zebra-layout(techniqueSingle)

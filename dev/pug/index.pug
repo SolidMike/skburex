@@ -1,0 +1,47 @@
+extends template/main
+
+block variables
+    - var title = 'Главная страница'
+    - let pageClass = 'homepage'
+block content
+    section.first-screen#first-screen
+        .container-fluid
+            .row
+                include pages/index/main-slider
+                include pages/index/widget-panel-block
+    section.work-types#wokr-types
+        include pages/index/work-types-block
+    section.our-technique.bg-dark-img#our-technique
+        include pages/index/our-technique-block
+    section.price-list#price-list
+        .container
+            .row
+                .col-md-9
+                    .price-list__text.right-line
+                        span Прайс лист строительной компании ооо бурэкс
+                .col-md-3
+                    +button('a', 'btn-tech', 'скачать прайс-лист', 'padding: 10px 15px; max-width: 300px;', '#', '_self')
+    section.services#services
+        include modules/blocks/services-block
+    section.about-company#about-company
+        include modules/blocks/about-company-block
+    section.price-download.bg-dark-img#price-download
+        include modules/blocks/price-download-block
+    section.about-gallery.bg-whitesmoke#about-gallery
+        include pages/index/about-gallery
+    section.advantages#advantages
+        include pages/index/advantages-block
+    section.reviews#reviews
+        include modules/sliders/reviews-slider
+    section.services-cost.bg-whitesmoke#services-cost
+        include modules/blocks/services-cost-block
+    section.seo#seo
+        include modules/blocks/seo-block
+    section.articles.bg-dark-img#articles
+        include modules/blocks/articles-block
+    section.partnership#partnership
+        include modules/blocks/partnership-block
+    section.clients#clients
+        include modules/blocks/clients-block
+    section.feedback#feedback
+        include modules/blocks/feedback-block

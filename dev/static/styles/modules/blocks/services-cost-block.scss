@@ -1,0 +1,7 @@
+.services-cost {
+  &__item {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+}

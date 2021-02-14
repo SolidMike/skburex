@@ -1,0 +1,33 @@
+extends template/main
+
+block variables
+    - var title = 'О нас';
+    - let pageClass = 'about-page'
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('О нас')
+    section.services#services
+        include modules/blocks/services-block
+    section.about-company#about-company
+        include modules/blocks/about-company-block
+    section.price-download.bg-dark-img#price-download
+        include modules/blocks/price-download-block
+    section.certificates.bg-whitesmoke#certificates
+        include pages/about/certificates-gallery
+    section.reviews-slider#reviews-slider
+        include modules/sliders/reviews-slider
+    section.services-cost.bg-whitesmoke#services-cost
+        include modules/blocks/services-cost-block
+    section.articles.bg-dark-img#articles
+        include modules/blocks/articles-block
+    section.partnership#partnership
+        include modules/blocks/partnership-block
+    section.clients#clients
+        include modules/blocks/clients-block
+    section.feedback#feedback
+        include modules/blocks/feedback-block

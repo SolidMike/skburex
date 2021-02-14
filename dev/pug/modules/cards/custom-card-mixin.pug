@@ -1,0 +1,53 @@
+mixin cards(arr, className, titlePos = false)
+    each obj in arr
+        .custom-card(class!= attributes.class + ' ' + className + '__item')
+            if titlePos === true
+                .custom-card__title
+                    span #{obj.title}
+                img.custom-card__img(src=obj.img alt=obj.alt)
+                if obj.badge !== undefined
+                    .custom-card__badge
+                        span #{obj.badge}
+                    .custom-card__caption
+                        .custom-card__descr
+                            span !{obj.descr}
+                    if obj.href !== undefined
+                        .custom-card__footer
+                            a(href=obj.href)
+                                span Подробнее
+                    block blog-meta
+                else
+                    .custom-card__caption
+                        .custom-card__descr
+                            span #{obj.descr}
+                    if obj.href !== undefined
+                        .custom-card__footer
+                            a(href=obj.href)
+                                span Подробнее
+                    block blog-meta
+            else
+                img.custom-card__img(src=obj.img alt=obj.alt)
+                if obj.badge !== undefined
+                    .custom-card__badge
+                        span #{obj.badge}
+                    .custom-card__caption
+                        .custom-card__title
+                            span #{obj.title}
+                        .custom-card__descr
+                            span #{obj.descr}
+                    if obj.href !== undefined
+                        .custom-card__footer
+                            a(href=obj.href)
+                                span Подробнее
+                    block blog-meta
+                else
+                    .custom-card__caption
+                        .custom-card__title
+                            span #{obj.title}
+                        .custom-card__descr
+                            span #{obj.descr}
+                    if obj.href !== undefined
+                        .custom-card__footer
+                            a(href=obj.href)
+                                span Подробнее
+                    block blog-meta

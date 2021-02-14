@@ -1,0 +1,76 @@
+extends template/main
+
+block variables
+    - var title = 'Портфолио';
+    - let pageClass = 'portfolio-page'
+    -
+        const portfolio = [
+            {href: 'static/images/content/portfolio/1.jpg', img: 'static/images/content/portfolio/1.jpg', caption: '1'},
+            {
+                href: 'static/images/content/portfolio/bur011.jpg',
+                img: 'static/images/content/portfolio/bur011.jpg',
+                caption: '2'
+            },
+            {
+                href: 'static/images/content/portfolio/slider-min-1.jpg',
+                img: 'static/images/content/portfolio/slider-min-1.jpg',
+                caption: '3'
+            },
+            {
+                href: 'static/images/content/portfolio/slider-min-2.jpg',
+                img: 'static/images/content/portfolio/slider-min-2.jpg',
+                caption: '4'
+            },
+            {
+                href: 'static/images/content/portfolio/slider-min-4.jpg',
+                img: 'static/images/content/portfolio/slider-min-4.jpg',
+                caption: '5'
+            },]
+block content
+    .breadcrumbs-wrapper.bg-light-gradient
+        .container
+            .row
+                .col-sm-12
+                    ul.breadcrumbs
+                        +breadcrumbs-item('Главная','/')
+                        +breadcrumbs-item('Портфолио')
+    section.page-description#page-description
+        .container
+            .row
+                .col-sm-12
+                    .section-title
+                    p
+                        | Сотрудники нашей организации имеют опыт подобных работ и выполнят все работы в точном соответствии с проектной документацией данного проекта.
+                    h2 Наша компания проводила работы на следующих объектах:
+                    ul
+                        li 2020 г. – г. Нижний Новгород, «Транснефть» устройство БНС D530мм, L=4500мм
+                        li 2020г. – г. Тверь, устройство БНС D630 мм, L=10000мм под пешеходный мост через р. Тьмака.
+                        li 2020г. – г. Владимир, устройство БНС D=325, L=7000мм под шумозащитные экраны
+                        li 2020г. – г. Ярославль, «Депо Транснефть» БНС D530мм, L=9000мм.
+                        li 2020г. – г. Москва, комплекс работ по разработке и устройству котлована «Юго-Западный участок Третьего пересадочного контура»
+                        li 2020г. – Московская область, д. Мамыри, «Линия метрополитена» БНС D630mm, L=12 700mm.
+                        li 2020г. – Московская область, д. Мамыри, «Линия метрополитена» БНС D630mm, L=12 700mm.
+    section.portfolio-slider-section#portfolio-slider-section
+        .container
+            .row
+                .col-sm-12
+                    +slider(portfolio, 'portfolio-slider')
+                        block slide
+                            .swiper-slide
+                                img(src=obj.img alt="")
+                        block controls
+                            .swiper-pagination
+                    .swiper-button-prev.portfolio-slider__btn-prev
+                        i.fas.fa-chevron-left
+                    .swiper-button-next.portfolio-slider__btn-next
+                        i.fas.fa-chevron-right
+    section.bg-whitesmoke#portfolio-gallery
+            .container
+                .row
+                    +gallery(portfolio, 'portfolio-gallery')(class="col-sm-4 mt-4")
+    section.price-download.bg-dark-img#price-download
+        include modules/blocks/price-download-block
+    section.partnership#partnership
+        include modules/blocks/partnership-block
+    section.feedback#feedback
+        include modules/blocks/feedback-block

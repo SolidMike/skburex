@@ -1,0 +1,31 @@
+.partnership {
+  .step {
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 1rem;
+      }
+    }
+    &__icon {
+      background-color: $darkgoldenrod;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      color: $white;
+      width: 140px;
+      height: 140px;
+      margin-bottom: .5rem;
+    }
+    &__text {
+      color: $darkslategray;
+      font-weight: 800;
+      font-size: .9rem;
+      text-align: center;
+    }
+  }
+}
